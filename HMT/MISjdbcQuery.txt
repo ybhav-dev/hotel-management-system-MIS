@@ -1,0 +1,45 @@
+create database hotelmanagementsystem;
+show databases;
+use hotelmanagementsystem;
+create table login(username varchar(25),password varchar(25));
+select * from login;
+insert into login values('vaibhav', '12345');
+insert into login values('himaadri', '12345');
+use mydb;
+select * from designation;
+create table employee(name varchar(25), age varchar(10), gender varchar(15), job varchar(30), salary varchar(15), phone varchar(15), email varchar(40));
+select * from employee;
+DELETE FROM employee WHERE name ='null';
+DELETE FROM employee WHERE job = 'Front Desk Clerks';
+
+drop table employee;
+create table room(roomnumber varchar(10),availability varchar(20), cleaning_status varchar(20), price varchar(20), bed_type varchar(20));
+select * from room;
+
+UPDATE room
+SET availability = 'Available'
+WHERE roomnumber = '101';
+
+drop table room;
+show tables;
+show databases;
+
+create table customer(document varchar(20), number varchar(20),name varchar(30), gender varchar(15), country varchar(20), room varchar(20), checkintime varchar(80), deposit varchar(20));
+select * from customer;
+drop table customer;
+
+UPDATE customer
+SET name = 'Tod'
+WHERE country = 'USA';
+
+UPDATE customer
+SET room = '105'
+WHERE name = 'Tod';
+
+create table department(department varchar(30), budget varchar(30));
+insert into department values('Front Office','500000');
+insert into department values('Housekeeping','40000');
+insert into department values('Food And Beverages','230000');
+insert into department values('Kitchen Products','540000');
+insert into department values('Security','500000');
+select * from department;
